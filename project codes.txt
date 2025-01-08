@@ -1,0 +1,94 @@
+MySQL -h localhost -u root
+
+create database db_dmrs;
+use db_dmrs;
+
+CREATE TABLE Disaster (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    region VARCHAR(100),
+    severity INT
+);
+
+CREATE TABLE Shelter (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    location VARCHAR(255),
+    status VARCHAR(50)
+);
+
+CREATE TABLE Relief (
+    id INT PRIMARY KEY,
+    type VARCHAR(100),
+    quantity INT,
+    location VARCHAR(255)
+);
+
+CREATE TABLE Volunteer (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    address VARCHAR(255),
+    phone_no VARCHAR(15),
+    email VARCHAR(100),
+    occupation VARCHAR(50),
+    dob date,
+    assigned_location VARCHAR(255),
+    medical_info TEXT,
+    blood_group VARCHAR(10),
+    allergy VARCHAR(255),
+    chronic_disease VARCHAR(255)
+);
+
+CREATE TABLE Victim (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    address VARCHAR(255),
+    phone_no VARCHAR(15),
+    email VARCHAR(100),
+    occupation VARCHAR(50),
+    dob date,
+    current_location VARCHAR(255),
+    requirement VARCHAR(255),
+    medical_info TEXT,
+    blood_group VARCHAR(10),
+    allergy VARCHAR(255),
+    chronic_disease VARCHAR(255)
+);
+
+CREATE TABLE Involves (
+    volunteer_id INT,
+    relief_id INT,
+    victim_id INT,
+    PRIMARY KEY (volunteer_id, relief_id, victim_id),
+    FOREIGN KEY (volunteer_id) REFERENCES Volunteer(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (relief_id) REFERENCES Relief(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (victim_id) REFERENCES Victim(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Collects (
+    volunteer_id INT,
+    relief_id INT,
+    PRIMARY KEY (volunteer_id, relief_id),
+    FOREIGN KEY (volunteer_id) REFERENCES Volunteer(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (relief_id) REFERENCES Relief(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Seeks (
+    victim_id INT,
+    shelter_id INT,
+    PRIMARY KEY (victim_id, shelter_id),
+    FOREIGN KEY (victim_id) REFERENCES Victim(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (shelter_id) REFERENCES Shelter(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Impacts (
+    disaster_id INT,
+    victim_id INT,
+    PRIMARY KEY (disaster_id, victim_id),
+    FOREIGN KEY (disaster_id) REFERENCES Disaster(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (victim_id) REFERENCES Victim(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+ALTER TABLE  relief 
+CHANGE quantity 
+quantity varchar(55);

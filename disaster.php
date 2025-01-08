@@ -16,8 +16,8 @@
     <a href="impacts.php">See disaster impacting victims</a><br>
     <h1>Insert Disaster Details</h1>
         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-            <label for="id">Disaster ID:</label><br>
-            <input type="number" name="id" required><br><br>
+            <!-- <label for="id">Disaster ID:</label><br>
+            <input type="number" name="id" required><br><br> -->
             
             <label for="name">Disaster Name:</label><br>
             <input type="text" name="name" required><br><br>
@@ -36,17 +36,17 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS);
+       // $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS);empty($id)||
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
         $region = filter_input(INPUT_POST, "region", FILTER_SANITIZE_SPECIAL_CHARS);
         $severity = filter_input(INPUT_POST, "severity", FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-    if (empty($id)||empty($name)||empty($region)||empty($severity)) {
+    if (empty($name)||empty($region)||empty($severity)) {
         echo"Please enter data";
     }else {
-        $sql = "INSERT INTO Disaster (id, name, region, severity)
-            VALUES ('$id', '$name', '$region', '$severity')";
+        $sql = "INSERT INTO Disaster (name, region, severity)
+            VALUES ('$name', '$region', '$severity')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully.";

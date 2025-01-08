@@ -16,8 +16,8 @@
     <a href="involves.php">See involvement</a><br>
     <h3>Volunteer Registration</h3><br>
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-        <label for="id">ID:</label><br>
-        <input type="number" name="id" required><br><br>
+        <!-- <label for="id">ID:</label><br>
+        <input type="number" name="id" required><br><br> -->
 
         <label for="name">Name:</label><br>
         <input type="text" name="name" required><br><br>
@@ -59,7 +59,7 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS);
+       // $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS);empty($id)||
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
         $address = filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
         $phone_no = filter_input(INPUT_POST, "phone_no", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -74,11 +74,11 @@
     }
 
     
-    if (empty($id)||empty($name)||empty($address)||empty($phone_no)) {
+    if (empty($name)||empty($address)||empty($phone_no)) {
         echo"Please enter data";
     }else {
-        $sql = "INSERT INTO Volunteer (id, name, address, phone_no, email, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease)
-            VALUES ('$id', '$name', '$address', '$phone_no', '$email', '$occupation', '$dob', '$assigned_location', '$medical_info', '$blood_group', '$allergy', '$chronic_disease')";
+        $sql = "INSERT INTO Volunteer (name, address, phone_no, email, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease)
+            VALUES ('$name', '$address', '$phone_no', '$email', '$occupation', '$dob', '$assigned_location', '$medical_info', '$blood_group', '$allergy', '$chronic_disease')";
     
     if ($conn->query($sql) === TRUE) {
         echo "You are now registered!";

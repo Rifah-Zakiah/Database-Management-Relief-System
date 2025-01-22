@@ -7,18 +7,18 @@
 
     // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Collect and sanitize the victim ID input
-        $victim_id = mysqli_real_escape_string($conn, $_POST['victim_id']);
+        // Collect and sanitize input
+        $search_value = mysqli_real_escape_string($conn, $_POST['search_value']);
 
-        // Query to fetch victim details
-        $sql = "SELECT * FROM Victim WHERE id = '$victim_id'";
+        // Query to fetch victim details using ID or NID
+        $sql = "SELECT * FROM Victim WHERE id = '$search_value' OR nid = '$search_value'";
         $result = $conn->query($sql);
 
         // Check if a record is found
         if ($result->num_rows > 0) {
             $victim_data = $result->fetch_assoc();
         } else {
-            $error_message = "No profile found for the provided ID.";
+            $error_message = "No profile found for the provided ID or NID.";
         }
     }
 ?>
@@ -29,6 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victim Profile</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,7 +40,7 @@
         }
         input[type="text"] {
             padding: 5px;
-            width: 200px;
+            width: 250px;
             margin-right: 10px;
         }
         input[type="submit"] {
@@ -63,10 +64,10 @@
 
 <h2>View Victim Profile</h2>
 
-<!-- Input form for victim ID -->
+<!-- Input form for victim ID or NID -->
 <form method="POST" action="victim_profile.php">
-    <label for="victim_id">Enter Your ID:</label>
-    <input type="text" name="victim_id" id="victim_id" required>
+    <label for="search_value">Enter Your ID or NID:</label>
+    <input type="text" name="search_value" id="search_value" required>
     <input type="submit" value="View Profile">
 </form>
 
@@ -83,6 +84,7 @@
         <p><strong>Address:</strong> <?php echo htmlspecialchars($victim_data['address']); ?></p>
         <p><strong>Phone:</strong> <?php echo htmlspecialchars($victim_data['phone_no']); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($victim_data['email']); ?></p>
+        <p><strong>NID:</strong> <?php echo htmlspecialchars($victim_data['nid']); ?></p>
         <p><strong>Occupation:</strong> <?php echo htmlspecialchars($victim_data['occupation']); ?></p>
         <p><strong>Date of Birth:</strong> <?php echo htmlspecialchars($victim_data['dob']); ?></p>
         <p><strong>Current Location:</strong> <?php echo htmlspecialchars($victim_data['current_location']); ?></p>

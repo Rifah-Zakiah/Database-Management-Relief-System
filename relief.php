@@ -9,12 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relief</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
-    <a href="collects.php">Collect Relief</a><br>
-    <a href="involves.php">See involvement</a><br>
-    <a href="search_relief.php">Search in Relief Table</a>
+    <a href="home.php">Go back to home</a>
+    <a href="collects.php">Collect Relief</a>
+    <a href="search_relief.php">Search for Relief </a>
     <h1>Insert Relief Details</h1>
         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <!-- <label for="id">Relief ID:</label><br>

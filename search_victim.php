@@ -30,6 +30,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victim Search</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Basic styling */
         table {
@@ -73,6 +74,7 @@
                     <th>Address</th>
                     <th>Phone</th>
                     <th>Email</th>
+                    <th>NID</th>
                     <th>Occupation</th>
                     <th>DOB</th>
                     <th>Current Location</th>
@@ -91,6 +93,7 @@
                         <td><?php echo htmlspecialchars($row['address']); ?></td>
                         <td><?php echo htmlspecialchars($row['phone_no']); ?></td>
                         <td><?php echo htmlspecialchars($row['email']); ?></td>
+                        <td><?php echo htmlspecialchars($row['nid']); ?></td>
                         <td><?php echo htmlspecialchars($row['occupation']); ?></td>
                         <td><?php echo htmlspecialchars($row['dob']); ?></td>
                         <td><?php echo htmlspecialchars($row['current_location']); ?></td>
@@ -105,7 +108,7 @@
         </table><br>
         
     <?php endif; ?>
-    <a href="victim.php">Go back</a><br>
+    <a href="helping.php">Go back</a><br>
 </body>
 </html>
 

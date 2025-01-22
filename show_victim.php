@@ -8,6 +8,7 @@
 <html>
 <head>
     <title>Victim Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -35,6 +36,7 @@
             <th>Address</th>
             <th>Phone No</th>
             <th>Email</th>
+            <th>NID</th>
             <th>Occupation</th>
             <th>Date of Birth</th>
             <th>Current Location</th>
@@ -54,6 +56,7 @@
                         <td>{$row['address']}</td>
                         <td>{$row['phone_no']}</td>
                         <td>{$row['email']}</td>
+                        <td>{$row['nid']}</td>
                         <td>{$row['occupation']}</td>
                         <td>{$row['dob']}</td>
                         <td>{$row['current_location']}</td>

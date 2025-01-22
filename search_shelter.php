@@ -17,6 +17,7 @@
 <html>
 <head>
     <title>Search Shelter Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -74,7 +75,8 @@
         </table><br>
         
     <?php endif; ?>
-    <a href="shelter.php">Go Back</a>
+    <a href="help.php">Go to get help</a>
+    <a href="helping.php">Go to help</a>
 </body>
 </html>
 <?php

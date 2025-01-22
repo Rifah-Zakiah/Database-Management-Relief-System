@@ -9,11 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter Details</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
-    <a href="search_shelter.php">Search in Shelter Table</a><br>
-    <a href="view_seeks.php">See victims in shelter</a><br>
+    <a href="home.php">Go back to home</a>
+    <!-- <a href="search_shelter.php">Search in Shelter Table</a><br> -->
+    <a href="view_seeks.php">See victims in shelter</a>
     <h1>Insert Shelter Details</h1>
         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
             <!-- <label for="id">Shelter ID:</label><br>
@@ -30,7 +31,7 @@
             
             <button type="submit">Submit</button><br>
         </form>
-        <a href="show_shelter.php">Shelter Table</a><br>
+        <a href="show_shelter.php">Shelter Details</a><br>
 </body>
 </html>
 

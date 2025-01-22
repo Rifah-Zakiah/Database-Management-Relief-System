@@ -25,6 +25,7 @@
 <html>
 <head>
     <title>Disaster Impacting Victims</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="home.php">Go back to home</a><br>
@@ -36,8 +37,8 @@
         <input type="number" id="victim_id" name="victim_id" required>
         <button type="submit">Add Record</button>
     </form>
-    <a href="view_impacts.php">See Table</a><br>
-    <a href="disaster.php">Go to add or see Disaster Details</a><br>
-    <a href="victim.php">Go to add or see Victim Details</a><br>
+    <a href="view_impacts.php">Go back</a><br>
+    <!-- <a href="disaster.php">Go to add or see Disaster Details</a>
+    <a href="victim.php">Go to add or see Victim Details</a> -->
 </body>
 </html>

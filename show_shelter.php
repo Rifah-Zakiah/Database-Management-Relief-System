@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Shelter Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -25,7 +26,9 @@
     </style>
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
+    <a href="home.php">Go back to home</a>
+    <a href="seeks.php">Seek shelter</a>
+    <a href="shelter.php"> Add shelter info </a>
     <h1>Shelter Table</h1>
     <table>
         <tr>
@@ -50,7 +53,9 @@
         }
         ?>
     </table>
-    <a href="shelter.php">Go Back</a>
+    
+    <a href="help.php">Go to get help</a>
+    <a href="helping.php">Go to help</a>
 </body>
 </html>
 <?php

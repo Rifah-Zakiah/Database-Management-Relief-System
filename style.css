@@ -1,0 +1,97 @@
+/* General Reset */
+body, h1, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #F8F9FA; /* Soft White */
+    color: #2C2C2C; /* Charcoal Black */
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Header Styling */
+h1 {
+    color: #003366; /* Navy Blue */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    display: block;
+    color: #87CEEB; /* Sky Blue */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: #FFA500; /* Warm Orange */
+    text-decoration: none;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 1px solid #6C757D; /* Slate Gray */
+    margin: 20px 0;
+}
+
+/* Buttons & Notices */
+button, .notice {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.notice {
+    background-color: #FF4C4C; /* Bright Red */
+    color: #F8F9FA; /* Soft White */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Utility Button Styling */
+button.success {
+    background-color: #28A745; /* Safety Green */
+    color: #F8F9FA; /* Soft White */
+}
+
+button:hover {
+    background-color: #FFA500; /* Warm Orange */
+}
+
+/* Navigation Links */
+nav {
+    background-color: #003366; /* Navy Blue */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #F8F9FA; /* Soft White */
+    margin: 0 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #87CEEB; /* Sky Blue */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6C757D; /* Slate Gray */
+    font-size: 0.9em;
+}

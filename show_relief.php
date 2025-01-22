@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Relief Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -25,7 +26,9 @@
     </style>
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
+    <a href="home.php">Go back to home</a>
+    <a href="collects.php">Collect Relief</a>
+    <a href="relief.php">Add Relief Info</a>
     <h1>Relief Table</h1>
     <table>
         <tr>
@@ -50,7 +53,8 @@
         }
         ?>
     </table><br>
-    <a href="relief.php">Go Back</a><br>
+    <a href="help.php">Go to get help</a>
+    <a href="helping.php">Go to help</a>
 </body>
 </html>
 <?php

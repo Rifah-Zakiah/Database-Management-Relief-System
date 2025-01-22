@@ -17,6 +17,7 @@
 <html>
 <head>
     <title>Search Relief Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -73,6 +74,8 @@
         
     <?php endif; ?>
     <a href="relief.php">Go back</a>
+    <a href="help.php">Go to get help</a>
+    <a href="helping.php">Go to help</a>
 </body>
 </html>
 <?php

@@ -30,6 +30,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Search</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Basic styling */
         table {
@@ -73,6 +74,7 @@
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Email</th>
+                <th>NID</th>
                 <th>Occupation</th>
                 <th>DOB</th>
                 <th>Assigned Location</th>
@@ -90,6 +92,7 @@
                     <td><?php echo htmlspecialchars($row['address']); ?></td>
                     <td><?php echo htmlspecialchars($row['phone_no']); ?></td>
                     <td><?php echo htmlspecialchars($row['email']); ?></td>
+                    <td><?php echo htmlspecialchars($row['nid']); ?></td>
                     <td><?php echo htmlspecialchars($row['occupation']); ?></td>
                     <td><?php echo htmlspecialchars($row['dob']); ?></td>
                     <td><?php echo htmlspecialchars($row['assigned_location']); ?></td>
@@ -103,7 +106,8 @@
     </table><br>
     
 <?php endif; ?>
-<a href="volunteer.php">Go Back</a>
+<a href="help.php">Go to get help</a>
+<a href="helping.php">Go to help</a>
 </body>
 </html>
 

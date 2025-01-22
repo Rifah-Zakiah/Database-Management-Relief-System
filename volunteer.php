@@ -8,13 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Info</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
-    <a href="search_volunteer.php">Search Volunteers</a><br>
-    <a href="collects.php">Already registered? Collect Relief</a><br>
-    <a href="involves.php">See involvement</a><br>
-    <h3>Volunteer Registration</h3><br>
+    <a href="helping.php">Go back</a>
+
+    <h3>Volunteer Registration</h3>
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <!-- <label for="id">ID:</label><br>
         <input type="number" name="id" required><br><br> -->
@@ -30,6 +29,9 @@
 
         <label for="email">Email:</label><br>
         <input type="email" name="email" required><br><br>
+
+        <label for="nid">NID:</label><br>
+        <input type="text" name="nid"><br><br>
 
         <label for="occupation">Occupation:</label><br>
         <input type="text" name="occupation"><br><br>
@@ -52,19 +54,21 @@
         <label for="medical_info">Medical Info:</label><br>
         <textarea name="medical_info" rows="4" cols="50"></textarea><br><br>
 
-        <input type="submit" value="Submit"><br>
-        <a href="show_volunteer.php">Volunteer Table</a><br>
+        <button type="submit">Submit</button><br>
+
+        <a href="home.php">Go back to home</a>
 </body>
 </html>
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-       // $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS);empty($id)||
+        //$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_SPECIAL_CHARS); empty($id)||
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
         $address = filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
         $phone_no = filter_input(INPUT_POST, "phone_no", FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
         $occupation = filter_input(INPUT_POST, "occupation", FILTER_SANITIZE_SPECIAL_CHARS);
+        $nid = filter_input(INPUT_POST, "nid", FILTER_SANITIZE_SPECIAL_CHARS);
         $dob = filter_input(INPUT_POST, "dob", FILTER_SANITIZE_SPECIAL_CHARS);
         $assigned_location = filter_input(INPUT_POST, "assigned_location", FILTER_SANITIZE_SPECIAL_CHARS);
         $medical_info = filter_input(INPUT_POST, "medical_info", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -77,8 +81,8 @@
     if (empty($name)||empty($address)||empty($phone_no)) {
         echo"Please enter data";
     }else {
-        $sql = "INSERT INTO Volunteer (name, address, phone_no, email, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease)
-            VALUES ('$name', '$address', '$phone_no', '$email', '$occupation', '$dob', '$assigned_location', '$medical_info', '$blood_group', '$allergy', '$chronic_disease')";
+        $sql = "INSERT INTO Volunteer (name, address, phone_no, email, nid, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease)
+            VALUES ('$name', '$address', '$phone_no', '$email', '$nid', '$occupation', '$dob', '$assigned_location', '$medical_info', '$blood_group', '$allergy', '$chronic_disease')";
     
     if ($conn->query($sql) === TRUE) {
         echo "You are now registered!";

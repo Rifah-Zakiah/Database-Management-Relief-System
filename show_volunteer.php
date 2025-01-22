@@ -7,7 +7,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
         table {
             width: 100%;
             border-collapse: collapse;
@@ -34,6 +36,7 @@
             <th>Address</th>
             <th>Phone No</th>
             <th>Email</th>
+            <th>NID</th>
             <th>Occupation</th>
             <th>Date of Birth</th>
             <th>Assigned Location</th>
@@ -52,6 +55,7 @@
                         <td>{$row['address']}</td>
                         <td>{$row['phone_no']}</td>
                         <td>{$row['email']}</td>
+                        <td>{$row['nid']}</td>
                         <td>{$row['occupation']}</td>
                         <td>{$row['dob']}</td>
                         <td>{$row['assigned_location']}</td>
@@ -66,7 +70,7 @@
         }
         ?>
     </table><br>
-    <a href="volunteer.php">Go Back</a><br>
+    <a href="helping.php">Go Back</a><br>
 </body>
 </html>
 <?php

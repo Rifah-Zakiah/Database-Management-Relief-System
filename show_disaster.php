@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Disaster Table</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 100%;
@@ -25,7 +26,8 @@
     </style>
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
+    <a href="home.php">Go back to home</a>
+    <a href="disaster.php">Add Disaster Info</a>
     <h1>Disaster Table</h1>
     <table>
         <tr>
@@ -33,6 +35,8 @@
             <th>Name</th>
             <th>Region</th>
             <th>Severity</th>
+            <th>Start Date</th>
+            <th>End Date</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
@@ -43,6 +47,8 @@
                         <td>{$row['name']}</td>
                         <td>{$row['region']}</td>
                         <td>{$row['severity']}</td>
+                        <td>{$row['start_date']}</td>
+                        <td>{$row['end_date']}</td>
                       </tr>";
             }
         } else {
@@ -50,7 +56,8 @@
         }
         ?>
     </table>
-    <a href="disaster.php">Go Back</a><br>
+    <a href="help.php">Go to get help</a>
+    <a href="helping.php">Go to help</a>
 </body>
 </html>
 <?php

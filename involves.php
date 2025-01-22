@@ -25,9 +25,9 @@
 <html>
 <head>
     <title>Involves</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="home.php">Go back to home</a><br>
     <h1>Enter Involvement:</h1>
     <form method="POST" action="">
         <label for="volunteer_id">Volunteer ID:</label>
@@ -38,9 +38,10 @@
         <input type="number" id="victim_id" name="victim_id" required><br><br>
         <button type="submit">Add Record</button>
     </form><br>
-    <a href="view_involves.php">See table</a><br>
-    <a href="volunteer.php">Register as Volunteer</a><br>
-    <a href="victim.php">Need assistance?</a><br>
-    <a href="relief.php">Add info on Relief</a><br>
+    <a href="view_involves.php">Go Back</a><br>
+    <!-- <a href="volunteer.php">Register as Volunteer</a><br>
+    <a href="victim.php">Need assistance?</a>
+    <a href="relief.php">Add info on Relief</a> -->
+    <a href="home.php">Go back to home</a>
 </body>
 </html>

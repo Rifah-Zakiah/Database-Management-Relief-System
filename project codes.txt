@@ -92,3 +92,85 @@ CREATE TABLE Impacts (
 ALTER TABLE  relief 
 CHANGE quantity 
 quantity varchar(55);
+
+INSERT INTO Volunteer (name, address, phone_no, email, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease) VALUES
+('Mohammad Rahim', 'Dhaka', '01711112222', 'rahim@example.com', 'Teacher', '1985-05-14', 'Dhaka', 'None', 'B+', 'Dust', 'None'),
+('Fatema Begum', 'Chattogram', '01822223333', 'fatema@example.com', 'Nurse', '1990-07-20', 'Chattogram', 'None', 'O-', 'Pollen', 'Hypertension'),
+('Karim Uddin', 'Sylhet', '01933334444', 'karim@example.com', 'Engineer', '1982-03-12', 'Sylhet', 'None', 'A+', 'None', 'Diabetes'),
+('Nasima Khatun', 'Rajshahi', '01744445555', 'nasima@example.com', 'Doctor', '1975-09-30', 'Rajshahi', 'Uses inhaler', 'AB+', 'Dust', 'Asthma'),
+('Ahsan Ullah', 'Barisal', '01655556666', 'ahsan@example.com', 'Farmer', '1988-11-10', 'Barisal', 'None', 'B+', 'None', 'None'),
+('Mahbubur Rahman', 'Khulna', '01866667777', 'mahbubur@example.com', 'Social Worker', '1980-06-25', 'Khulna', 'None', 'O+', 'Peanuts', 'None'),
+('Salma Sultana', 'Gazipur', '01777778888', 'salma@example.com', 'Student', '2000-01-15', 'Gazipur', 'None', 'A-', 'Latex', 'None'),
+('Zahirul Islam', 'Rangpur', '01988889999', 'zahirul@example.com', 'Banker', '1987-04-08', 'Rangpur', 'None', 'AB-', 'None', 'Hypertension'),
+('Jahanara Akter', 'Patuakhali', '01899990000', 'jahanara@example.com', 'Nurse', '1995-08-20', 'Patuakhali', 'None', 'O+', 'None', 'None'),
+('Mizanur Rahman', 'Comilla', '01600001111', 'mizanur@example.com', 'Shopkeeper', '1985-12-02', 'Comilla', 'None', 'A+', 'None', 'Diabetes'),
+('Sohana Yasmin', 'Cox\'s Bazar', '01711112233', 'sohana@example.com', 'NGO Worker', '1991-05-10', 'Cox\'s Bazar', 'None', 'B-', 'None', 'None'),
+('Tanvir Ahmed', 'Narayanganj', '01822223344', 'tanvir@example.com', 'Electrician', '1983-07-17', 'Narayanganj', 'None', 'AB+', 'Pollen', 'None'),
+('Sharmin Nahar', 'Mymensingh', '01933334455', 'sharmin@example.com', 'Housewife', '1992-02-25', 'Mymensingh', 'None', 'O+', 'None', 'None'),
+('Abdullah Al Mamun', 'Jessore', '01644445566', 'mamun@example.com', 'Driver', '1986-03-03', 'Jessore', 'None', 'A-', 'Seafood', 'None'),
+('Hasina Akter', 'Noakhali', '01755556677', 'hasina@example.com', 'Teacher', '1979-09-01', 'Noakhali', 'None', 'B+', 'None', 'None'),
+('Rakibul Hasan', 'Bogra', '01866667788', 'rakibul@example.com', 'Businessman', '1988-10-11', 'Bogra', 'None', 'O-', 'None', 'None'),
+('Nusrat Jahan', 'Feni', '01977778899', 'nusrat@example.com', 'Pharmacist', '1990-06-06', 'Feni', 'None', 'AB+', 'Dust', 'Asthma'),
+('Mahmud Hossain', 'Tangail', '01688889900', 'mahmud@example.com', 'Tailor', '1985-11-14', 'Tangail', 'None', 'A+', 'Peanuts', 'Hypertension'),
+('Farhana Rahman', 'Habiganj', '01799990011', 'farhana@example.com', 'Librarian', '1994-01-28', 'Habiganj', 'None', 'O+', 'None', 'None'),
+('Arifur Rahman', 'Dinajpur', '01800001122', 'arifur@example.com', 'Lawyer', '1981-07-19', 'Dinajpur', 'None', 'B-', 'Pollen', 'None');
+
+INSERT INTO Victim (name, address, phone_no, email, occupation, dob, current_location, requirement, medical_info, blood_group, allergy, chronic_disease) VALUES
+('Abdul Karim', 'Dhaka', '01712345678', 'karim@example.com', 'Teacher', '1985-02-15', 'Dhaka', 'Food', 'None', 'B+', 'Dust', 'None'),
+('Fatema Akter', 'Chattogram', '01823456789', 'fatema@example.com', 'Nurse', '1990-06-20', 'Chattogram', 'Shelter', 'None', 'O-', 'Pollen', 'None'),
+('Jamil Hossain', 'Sylhet', '01934567890', 'jamil@example.com', 'Farmer', '1988-11-01', 'Sylhet', 'Medicine', 'Uses inhaler', 'A+', 'None', 'Asthma'),
+('Nazma Begum', 'Rajshahi', '01645678901', 'nazma@example.com', 'Housewife', '1995-04-18', 'Rajshahi', 'Clothing', 'None', 'AB+', 'Peanuts', 'None'),
+('Aminul Islam', 'Khulna', '01756789012', 'aminul@example.com', 'Student', '2001-07-25', 'Khulna', 'Water', 'None', 'B-', 'None', 'None'),
+('Mahbub Rahman', 'Barisal', '01867890123', 'mahbub@example.com', 'Fisherman', '1978-09-14', 'Barisal', 'Shelter', 'None', 'O+', 'Dust', 'None'),
+('Salma Yasmin', 'Gazipur', '01978901234', 'salma@example.com', 'Shopkeeper', '1986-12-30', 'Gazipur', 'Medicine', 'None', 'A-', 'Latex', 'None'),
+('Rakibul Hasan', 'Mymensingh', '01689012345', 'rakibul@example.com', 'NGO Worker', '1993-03-22', 'Mymensingh', 'Clothing', 'None', 'AB+', 'None', 'Hypertension'),
+('Nasrin Sultana', 'Comilla', '01790123456', 'nasrin@example.com', 'Banker', '1982-05-10', 'Comilla', 'Food', 'None', 'O+', 'None', 'Diabetes'),
+('Kamal Uddin', 'Cox\'s Bazar', '01801234567', 'kamal@example.com', 'Driver', '1989-08-12', 'Cox\'s Bazar', 'Water', 'None', 'B+', 'Pollen', 'None'),
+('Mizanur Rahman', 'Rangpur', '01912345678', 'mizanur@example.com', 'Electrician', '1997-11-05', 'Rangpur', 'Medicine', 'None', 'O-', 'None', 'None'),
+('Sharmin Akter', 'Noakhali', '01623456789', 'sharmin@example.com', 'Teacher', '1984-02-09', 'Noakhali', 'Shelter', 'None', 'A+', 'None', 'None'),
+('Habibur Rahman', 'Tangail', '01734567890', 'habib@example.com', 'Farmer', '1991-06-17', 'Tangail', 'Food', 'None', 'AB+', 'None', 'None'),
+('Jahanara Khatun', 'Jessore', '01845678901', 'jahanara@example.com', 'Housewife', '1976-10-04', 'Jessore', 'Clothing', 'None', 'B-', 'Dust', 'None'),
+('Arif Hossain', 'Feni', '01956789012', 'arif@example.com', 'Shopkeeper', '1983-09-21', 'Feni', 'Medicine', 'None', 'O+', 'None', 'Hypertension'),
+('Shamima Akter', 'Habiganj', '01667890123', 'shamima@example.com', 'NGO Worker', '1990-12-13', 'Habiganj', 'Water', 'None', 'A-', 'Peanuts', 'None'),
+('Imran Hossain', 'Barisal', '01778901234', 'imran@example.com', 'Fisherman', '1987-04-28', 'Barisal', 'Shelter', 'None', 'B+', 'None', 'Asthma'),
+('Tasnim Ahmed', 'Dinajpur', '01889012345', 'tasnim@example.com', 'Teacher', '1992-01-06', 'Dinajpur', 'Clothing', 'None', 'O+', 'None', 'None'),
+('Kamrun Nahar', 'Sylhet', '01990123456', 'kamrun@example.com', 'Librarian', '1985-07-19', 'Sylhet', 'Food', 'None', 'AB+', 'Latex', 'None'),
+('Faruk Ahmed', 'Chattogram', '01601234567', 'faruk@example.com', 'Tailor', '1980-11-03', 'Chattogram', 'Medicine', 'None', 'A+', 'None', 'Diabetes');
+
+INSERT INTO Volunteer (id, name, address, phone_no, email, occupation, dob, assigned_location, medical_info, blood_group, allergy, chronic_disease)
+VALUES
+(10, 'Arif Ahmed', 'Dhaka', '01710000010', 'arif.ahmed@example.com', 'Doctor', '1985-05-12', 'Dhaka Medical Area', 'No specific medical issues', 'A+', 'None', 'None'),
+(11, 'Nabila Haque', 'Chittagong', '01710000011', 'nabila.haque@example.com', 'Nurse', '1992-03-14', 'Chittagong General Hospital', 'None', 'B+', 'Dust allergy', 'None'),
+(12, 'Tanvir Rahman', 'Chittagong', '01710000012', 'tanvir.rahman@example.com', 'Engineer', '1990-07-18', 'Karnaphuli Area', 'No issues', 'O+', 'None', 'None'),
+(13, 'Mithila Alam', 'Dhaka', '01710000013', 'mithila.alam@example.com', 'Teacher', '1988-11-25', 'Sector 10, Uttara', 'Healthy', 'AB+', 'None', 'None'),
+(14, 'Fahim Hasan', 'Rangamati', '01710000014', 'fahim.hasan@example.com', 'Social Worker', '1987-09-05', 'Kaptai Area', 'None', 'A-', 'Pollen allergy', 'Asthma'),
+(15, 'Shamim Akhter', 'Rajshahi', '01710000015', 'shamim.akhter@example.com', 'Farmer', '1978-12-19', 'Rajshahi University Area', 'No issues', 'B-', 'None', 'Hypertension'),
+(16, 'Ritu Saha', 'Rangpur', '01710000016', 'ritu.saha@example.com', 'Banker', '1991-04-22', 'Central Bank Rangpur', 'None', 'O-', 'None', 'None'),
+(17, 'Hasan Mahmud', 'Sylhet', '01710000017', 'hasan.mahmud@example.com', 'Accountant', '1989-06-30', 'Sylhet Main Road', 'None', 'AB-', 'None', 'None'),
+(18, 'Sumaiya Zaman', 'Bogra', '01710000018', 'sumaiya.zaman@example.com', 'Student', '2001-08-20', 'Bogra Library Area', 'Healthy', 'A+', 'None', 'None'),
+(19, 'Nahid Hossain', 'Kushtia', '01710000019', 'nahid.hossain@example.com', 'Lawyer', '1982-02-15', 'Court Area Kushtia', 'No issues', 'B+', 'Pet allergy', 'None'),
+(20, 'Morshed Alam', 'Patuakhali', '01710000020', 'morshed.alam@example.com', 'Fisherman', '1980-10-10', 'Bay Area Patuakhali', 'Healthy', 'O+', 'None', 'None'),
+(21, 'Anika Chowdhury', 'Dhaka', '01710000021', 'anika.chowdhury@example.com', 'Journalist', '1995-01-02', 'Mirpur DOHS', 'No issues', 'A+', 'None', 'None'),
+(22, 'Saifur Rahman', 'Khulna', '01710000022', 'saifur.rahman@example.com', 'Photographer', '1986-07-19', 'Khulna River Port', 'Healthy', 'B+', 'None', 'None'),
+(23, 'Lamia Nahar', 'Barisal', '01710000023', 'lamia.nahar@example.com', 'Nurse', '1994-12-09', 'Barisal Medical Area', 'None', 'O+', 'None', 'None'),
+
+
+ALTER TABLE Seeks 
+ADD COLUMN checkin_date DATE, 
+ADD COLUMN checkout_date DATE;
+
+ALTER TABLE disaster 
+ADD COLUMN start_date DATE, 
+ADD COLUMN end_date DATE;
+
+ALTER TABLE Victim
+ADD COLUMN nid VARCHAR(15);
+
+ALTER TABLE Volunteer
+ADD COLUMN nid VARCHAR(15);
+
+ALTER TABLE Collects 
+ADD COLUMN collection_date DATE;
+
+ALTER TABLE Collects 
+ADD COLUMN relief_destination VARCHAR(20);

@@ -174,3 +174,7 @@ ADD COLUMN collection_date DATE;
 
 ALTER TABLE Collects 
 ADD COLUMN relief_destination VARCHAR(20);
+
+ALTER TABLE Victim ADD CONSTRAINT unique_nid UNIQUE (nid);
+
+ALTER TABLE Volunteer ADD CONSTRAINT unique_nid UNIQUE (nid);
